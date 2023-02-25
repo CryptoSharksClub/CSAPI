@@ -1,11 +1,11 @@
 var MAX_SUPPLY = null
-const CONTRACT_ADDRESS = "0xBfe7f07224c0cEB5B164649e92E7772E6D859B9A"
+const CONTRACT_ADDRESS = "0xCB4A77381f367941BA217dCaC1050b64C354f6bA"
 const PORT = 3000
 const IS_REVEALED = true
 const UNREVEALED_METADATA = {
-  "name":"Unrevealed Croc",
+  "name":"Unrevealed Shark",
   "description":"???",
-  "image":"http://134.209.33.178:3000/unrevealed/image.png",
+  "image":"http://167.172.241.48:3000/unrevealed/image.gif",
   "attributes":[{"???":"???"}]
 }
 
@@ -13,10 +13,10 @@ const fs = require('fs')
 const express = require('express')
 const Web3 = require('web3')
 require('dotenv').config()
-const abi = require('../Contract.json')
+const Abi = require('../Contract.json')
 const Contract = require('web3-eth-contract')
 Contract.setProvider(process.env.RINKEBY_RPC_URL)
-const contract = new Contract(abi, CONTRACT_ADDRESS)
+const contract = new Contract(Abi.abi, CONTRACT_ADDRESS)
 
 const app = express()
 

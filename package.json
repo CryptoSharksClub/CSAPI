@@ -4,11 +4,12 @@
   "description": "Node.js API for NFT collections supporting diverse features",
   "main": "main.js",
   "dependencies": {
+    "@ethersproject/abi": "^5.7.0",
     "@kleros/file-to-ipfs": "^0.3.2",
     "dotenv": "^10.0.0",
-    "web3": "^1.5.2"
+    "web3": "^1.5.2",
+    "web3-eth-contract": "^1.8.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "test",
     "start": "node scripts/start.js",
