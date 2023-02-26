@@ -1,7 +1,7 @@
 var MAX_SUPPLY = null
 const CONTRACT_ADDRESS = "0xf260F78639AD502dB8d808E7a2C2B7Fd6EE69A17"
 const PORT = 80
-const IS_REVEALED = false
+const IS_REVEALED = true
 const UNREVEALED_METADATA = {
   "name":"Unrevealed Shark",
   "description":"???",
@@ -16,7 +16,7 @@ require('dotenv').config()
 const Abi = require('../Contract.json')
 const Contract = require('web3-eth-contract')
 Contract.setProvider(process.env.RINKEBY_RPC_URL)
-const contract = new Contract(Abi.abi, CONTRACT_ADDRESS)
+const contract = new Contract(abi, CONTRACT_ADDRESS)
 
 const app = express()
 
